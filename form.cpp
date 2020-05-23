@@ -1,3 +1,6 @@
+#include <QFile>
+#include <QTextStream>
+#include <QDebug>
 #include "form.h"
 #include "ui_form.h"
 
