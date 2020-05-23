@@ -2,12 +2,14 @@
 #define MYTHREAD_H
 
 #include <QThread>
+#include <vector>
 #include "globals.h"
 
 class MyThread : public QThread
 {
+    Q_OBJECT
 public:
-    MyThread();
+    MyThread(std::vector<int> *);
 
 protected:
     virtual void run();
@@ -15,6 +17,8 @@ protected:
 private:
     bool isOk(int row, int col);
     void dfs(int row);
+
+    std::vector<int> *columns;
 
 signals:
     void sigUpdateView();
