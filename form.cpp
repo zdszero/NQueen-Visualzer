@@ -10,8 +10,10 @@ Form::Form(QWidget *parent)
 {
     ui->setupUi(this);
 
+    this->setWindowTitle("NQueen Problem Visualizer");
     this->setFixedSize(800, 480);
     ui->editNum->setText("8");
+
     this->columns.resize(8, -1);
     this->lastCols.resize(8, 0);
     this->thread = new MyThread(&(this->columns));
